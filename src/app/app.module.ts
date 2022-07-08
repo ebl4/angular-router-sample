@@ -1,25 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrisisListComponent,
     HeroesListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeroesDetailComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: 'crisis-list', component: CrisisListComponent},
-      {path: 'heroes-list', component: HeroesListComponent},
-      {path: '', redirectTo: '/heroes-list', pathMatch: 'full'},
+      {path: 'heroes', component: HeroesListComponent, data: {animation: 'heroes'}},
+      {path: 'heroe/:id', component: HeroesDetailComponent, data: {animation: 'heroe'}},
+      {path: '', redirectTo: '/heroes', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ])
   ],
