@@ -8,8 +8,10 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,14 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     HeroesListComponent,
     PageNotFoundComponent,
     HeroesDetailComponent,
-    ComposeMessageComponent
+    ComposeMessageComponent,
+    NameEditorComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: 'crisis-list', component: CrisisListComponent},
