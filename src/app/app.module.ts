@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { HeroFormReactiveComponent } from './hero-form-reactive/hero-form-reactive.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     HeroesDetailComponent,
     ComposeMessageComponent,
     NameEditorComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    HeroFormReactiveComponent
   ],
   imports: [
     BrowserModule,
